@@ -14,7 +14,9 @@ namespace JwtAuthentication
             var jwtSettings = new JwtSettings();
             configuration.Bind("JwtSettings", jwtSettings);
 
-            var key = Encoding.UTF8.GetBytes(jwtSettings.SecretKey);
+            var secretKey = jwtSettings.SecretKey ?? throw new ArgumentNullException(nameof(jwtSettings.SecretKey), "Secret key cannot be null");
+            var key = Encoding.UTF8.GetBytes(secretKey);
+            //var key = Encoding.UTF8.GetBytes(jwtSettings.SecretKey);
 
             services.AddAuthentication(x =>
             {
