@@ -5,6 +5,8 @@ using System.Text;
 
 namespace JwtAuthentication
 {
+
+    //need to package this to nuget.org
     public class JwtTokenService : IJwtTokenService
     {
         private readonly JwtSettings _jwtSettings;

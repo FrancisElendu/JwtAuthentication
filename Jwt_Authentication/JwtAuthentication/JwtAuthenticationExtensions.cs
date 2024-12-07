@@ -6,6 +6,7 @@ using System.Text;
 
 namespace JwtAuthentication
 {
+    //need to package this to nuget.org
     public static class JwtAuthenticationExtensions
     {
         public static void AddJwtAuthentication(this IServiceCollection services, IConfiguration configuration)

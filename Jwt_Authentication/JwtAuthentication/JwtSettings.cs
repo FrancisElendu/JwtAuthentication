@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace JwtAuthentication
 {
+    //need to package this to nuget.org
     public class JwtSettings
     {
         public string? UserId { get; set; }
